@@ -1,63 +1,28 @@
 ## Readme
 
+I want a nice way to control my LED RGB pixels over my network; therefore, this is a personal project combining two python projects.
+1. The webstack is provided by web2py. 
+
+2. The pixel code is provided by Adafruit. 
+
+3. The OS running on my raspberry pi is Occidentals, Adafruit's successor to a derivation of Debian called Wheezy. 
+
+4. The Raspberry Pi is a credit-card sized computer that plugs into your TV and a keyboard. It’s a capable little PC which can be used for many of the things that your desktop PC does, like spreadsheets, word-processing and games. It also plays high-definition video. (from raspberrypi.org)
+
+
+
+
+## Underneath
+1. Web2py
 web2py is a free open source full-stack framework for rapid development of fast, scalable, secure and portable database-driven web-based applications. 
-
-It is written and programmable in Python. LGPLv3 License
-
 Learn more at http://web2py.com
 
+2. Pixel Code (Python)
+https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code
 
-## Tests
+3. Operating System
+Occidentals is an enhanced version of Wheezy, the Debian derviation designed for Raspberry Pi. 
+http://learn.adafruit.com/adafruit-raspberry-pi-educational-linux-distro/occidentalis-v0-dot-2
 
-[![Build Status](https://travis-ci.org/web2py/web2py.png)](https://travis-ci.org/web2py/web2py)
-
-[![Coverage Status](https://coveralls.io/repos/web2py/web2py/badge.png)](https://coveralls.io/r/web2py/web2py)
-
-## Installation Instructions
-
-To start web2py there is NO NEED to install it. Just unzip and do:
-
-    python web2py.py
-
-That's it!!!
-
-## web2py directory structure
-
-    project/
-        README
-        LICENSE
-        VERSION                    > this web2py version
-        web2py.py                  > the startup script
-        anyserver.py               > to run with third party servers
-        wsgihandler.py             > handler to connect to WSGI
-        ...                        > other handlers and example files
-        gluon/                     > the core libraries
-            contrib/               > third party libraries
-            tests/                 > unittests
-        applications/              > are the apps
-            admin/                 > web based IDE
-                ...
-            examples/              > examples, docs, links
-                ...
-            welcome/               > the scaffolding app (they all copy it)
-                ABOUT
-                LICENSE
-                models/
-                views/
-                controllers/
-                sessions/
-                errors/
-                cache/
-                static/
-                uploads/
-                modules/
-                cron/
-                tests/
-            ...                    > your own apps
-        scripts/                   > utility and installation scripts
-        site-packages/             > additional optional modules
-
-
-## Issues?
-
-Report issues at http://code.google.com/p/web2py/issues/
+4. Hardware
+http://www.raspberrypi.org/
