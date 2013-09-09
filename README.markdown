@@ -1,6 +1,7 @@
 ## Readme
 
 I want a nice way to control my LED RGB pixels over my network; therefore, this is a personal project combining two python projects.
+
 1. The webstack is provided by web2py. 
 
 2. The pixel code is provided by Adafruit. 
