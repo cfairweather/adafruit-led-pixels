@@ -9,7 +9,9 @@
 ## - call exposes all registered services (none by default)
 #########################################################################
 
+import ledpixels
 
+@auth.requires_login()
 def index():
     """
     example action using the internationalization operator T and flash
@@ -38,14 +40,6 @@ def user():
     to decorate functions that need access control
     """
     return dict(form=auth())
-
-@cache.action()
-def download():
-    """
-    allows downloading of uploaded files
-    http://..../[app]/default/download/[filename]
-    """
-    return response.download(request, db)
 
 
 def call():
