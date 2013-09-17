@@ -8,7 +8,33 @@ import time
 ledpixels_T_COLOR = 0;
 ledpixels_T_GRADI = 1;
 ledpixels_T_FLASH = 2;
-ledpixels_example = [[{"type":0,"time":0,"color":{"r":255,"g":0,"b":0},"time_end":6}],[{"type":0,"time":2,"color":{"r":0,"g":255,"b":20},"time_end":8}],[{"type":0,"time":4,"color":{"r":0,"g":28,"b":255},"time_end":10}],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
+
+ledpixels_example = [
+		[{"type":ledpixels_T_COLOR,"time":0,"color":{"r":255,"g":0,"b":0},"time_end":3}],
+		[{"type":ledpixels_T_COLOR,"time":1,"color":{"r":0,"g":255,"b":20},"time_end":4}],
+		[{"type":ledpixels_T_COLOR,"time":2,"color":{"r":0,"g":28,"b":255},"time_end":5}],
+		[{"type":ledpixels_T_GRADI,"time":0,"color":{"r":0,"g":0,"b":0},"time_end":1,"color_end":{"r":255,"g":0,"b":0}}, {"type":ledpixels_T_COLOR,"time":1,"color":{"r":255,"g":0,"b":0},"time_end":3}],
+		[{"type":ledpixels_T_GRADI,"time":1,"color":{"r":0,"g":0,"b":0},"time_end":2,"color_end":{"r":0,"g":255,"b":20}}, {"type":ledpixels_T_COLOR,"time":2,"color":{"r":0,"g":255,"b":20},"time_end":4}],
+		[{"type":ledpixels_T_GRADI,"time":2,"color":{"r":0,"g":0,"b":0},"time_end":3,"color_end":{"r":0,"g":28,"b":255}}, {"type":ledpixels_T_COLOR,"time":3,"color":{"r":0,"g":28,"b":255},"time_end":5}],
+		[{"type":ledpixels_T_FLASH,"time":0,"time_end":1,"color":{"r":255,"g":0,"b":0}, "period":0.2}, {"type":ledpixels_T_COLOR,"time":1,"color":{"r":255,"g":0,"b":0},"time_end":3}],
+		[{"type":ledpixels_T_FLASH,"time":1,"time_end":2,"color":{"r":0,"g":255,"b":20}, "period":0.2}, {"type":ledpixels_T_COLOR,"time":2,"color":{"r":0,"g":255,"b":20},"time_end":4}],
+		[{"type":ledpixels_T_FLASH,"time":2,"time_end":3,"color":{"r":0,"g":28,"b":255}, "period":0.2}, {"type":ledpixels_T_COLOR,"time":3,"color":{"r":0,"g":28,"b":255},"time_end":5}],
+		[{"type":ledpixels_T_COLOR,"time":0,"color":{"r":255,"g":0,"b":0},"time_end":3}],
+		[{"type":ledpixels_T_COLOR,"time":1,"color":{"r":0,"g":255,"b":20},"time_end":4}],
+		[{"type":ledpixels_T_COLOR,"time":2,"color":{"r":0,"g":28,"b":255},"time_end":5}],
+		[{"type":ledpixels_T_GRADI,"time":0,"color":{"r":0,"g":0,"b":0},"time_end":1,"color_end":{"r":255,"g":0,"b":0}}, {"type":ledpixels_T_COLOR,"time":1,"color":{"r":255,"g":0,"b":0},"time_end":3}],
+		[{"type":ledpixels_T_GRADI,"time":1,"color":{"r":0,"g":0,"b":0},"time_end":2,"color_end":{"r":0,"g":255,"b":20}}, {"type":ledpixels_T_COLOR,"time":2,"color":{"r":0,"g":255,"b":20},"time_end":4}],
+		[{"type":ledpixels_T_GRADI,"time":2,"color":{"r":0,"g":0,"b":0},"time_end":3,"color_end":{"r":0,"g":28,"b":255}}, {"type":ledpixels_T_COLOR,"time":3,"color":{"r":0,"g":28,"b":255},"time_end":5}],
+		[{"type":ledpixels_T_FLASH,"time":0,"time_end":1,"color":{"r":255,"g":0,"b":0}, "period":0.2}, {"type":ledpixels_T_COLOR,"time":1,"color":{"r":255,"g":0,"b":0},"time_end":3}],
+		[{"type":ledpixels_T_FLASH,"time":1,"time_end":2,"color":{"r":0,"g":255,"b":20}, "period":0.2}, {"type":ledpixels_T_COLOR,"time":2,"color":{"r":0,"g":255,"b":20},"time_end":4}],
+		[{"type":ledpixels_T_FLASH,"time":2,"time_end":3,"color":{"r":0,"g":28,"b":255}, "period":0.2}, {"type":ledpixels_T_COLOR,"time":3,"color":{"r":0,"g":28,"b":255},"time_end":5}],
+		[{"type":ledpixels_T_COLOR,"time":0,"color":{"r":255,"g":0,"b":0},"time_end":3}],
+		[{"type":ledpixels_T_COLOR,"time":1,"color":{"r":0,"g":255,"b":20},"time_end":4}],
+		[{"type":ledpixels_T_COLOR,"time":2,"color":{"r":0,"g":28,"b":255},"time_end":5}],
+		[{"type":ledpixels_T_GRADI,"time":0,"color":{"r":0,"g":0,"b":0},"time_end":1,"color_end":{"r":255,"g":0,"b":0}}, {"type":ledpixels_T_COLOR,"time":1,"color":{"r":255,"g":0,"b":0},"time_end":3}],
+		[{"type":ledpixels_T_GRADI,"time":1,"color":{"r":0,"g":0,"b":0},"time_end":2,"color_end":{"r":0,"g":255,"b":20}}, {"type":ledpixels_T_COLOR,"time":2,"color":{"r":0,"g":255,"b":20},"time_end":4}],
+		[{"type":ledpixels_T_GRADI,"time":2,"color":{"r":0,"g":0,"b":0},"time_end":3,"color_end":{"r":0,"g":28,"b":255}}, {"type":ledpixels_T_COLOR,"time":3,"color":{"r":0,"g":28,"b":255},"time_end":5}]
+		]
 
 
 class Pixels():
@@ -18,12 +44,13 @@ class Pixels():
 
 		self.pixels = [0] * 25
 
-		self.colorwipe(Color(255, 0, 0), 0.001)
-		self.colorwipe(Color(0, 255, 0), 0.001)
-		self.colorwipe(Color(0, 0, 255), 0.001)
+		# self.colorwipe(Color(255, 0, 0), 0.001)
+		# self.colorwipe(Color(0, 255, 0), 0.001)
+		# self.colorwipe(Color(0, 0, 255), 0.001)
 		self.colorwipe(Color(0, 0, 0), 0.001)
 
 	def writestrip(self):
+		# print "Writing pixels: "+str(self.pixels)
 		spidev = file("/dev/spidev0.0", "w")
 		for i in range(len(self.pixels)):
 			spidev.write(chr((self.pixels[i]>>16) & 0xFF))
@@ -64,6 +91,9 @@ class Pixels():
 # const int T_COLOR = 0;
 # const int T_GRADI = 1;
 # const int T_FLASH = 2;
+	
+	def example(self):
+		self.run(ledpixels_example, 8)
 
 	def run(self, tracks, duration):
 		index_marker = []
@@ -79,16 +109,17 @@ class Pixels():
 
 			time_curr  = time.time()
 			time_elapsed = time_curr - time_start
-			print "\n\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\nTime elapsed: "+str(time_elapsed)
+			# print "\n\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\nTime elapsed: "+str(time_elapsed)
 
 			self.writestrip()
 
 			for t in range(len(tracks)):
-				print "Track "+str(t)
+				# print "Track "+str(t)
+				seg_wasSet = False
 
 				track = tracks[t]
 				for d in range(index_marker[t], len(track)):
-					print "Checking segment "+str(d)
+					# print "Checking segment "+str(d)
 					segment = track[d]
 					seg_time = segment['time']
 					seg_time_end = segment['time_end']
@@ -96,14 +127,13 @@ class Pixels():
 
 					if seg_time <= time_elapsed and seg_time_end >= time_elapsed:
 
-						print "Active track! "+str(d)
-						print "Color: "+ str(segment['color']['r'])+", "+str(segment['color']['g'])+", "+str(segment['color']['b'])
+						seg_wasSet = True
 
-						seg_color = Color(min(segment['color']['r'],0),min(segment['color']['g'],0), min(segment['color']['b'],0))
+						seg_color = Color(max(segment['color']['r'],0),max(segment['color']['g'],0), max(segment['color']['b'],0))
 						seg_type = segment['type']
 
 						if seg_type==ledpixels_T_COLOR:
-							print "Setting Color"
+							# print "Setting Color self.setpixelcolor("+str(t)+", "+str(seg_color)+")"
 							self.setpixelcolor(t, seg_color)
 
 						elif seg_type==ledpixels_T_GRADI:
@@ -111,16 +141,16 @@ class Pixels():
 							seg_progress_perc = (time_elapsed - seg_time )*1.0/(seg_duration*1.0)
 							seg_progress_iprc = 1.0-seg_progress_perc
 
-							seg_color_compd = Color(segment['color']['r']*(seg_progress_iprc)+min(segment['color_end']['r'],0)*(seg_progress_perc),
-													segment['color']['g']*(seg_progress_iprc)+min(segment['color_end']['g'],0)*(seg_progress_perc), 
-													segment['color']['b']*(seg_progress_iprc)+min(segment['color_end']['b'],0)*(seg_progress_perc))
+							seg_color_compd = Color(segment['color']['r']*(seg_progress_iprc)+max(segment['color_end']['r'],0)*(seg_progress_perc),
+													segment['color']['g']*(seg_progress_iprc)+max(segment['color_end']['g'],0)*(seg_progress_perc), 
+													segment['color']['b']*(seg_progress_iprc)+max(segment['color_end']['b'],0)*(seg_progress_perc))
 
 							self.setpixelcolor(t, seg_color_compd)
 
 						elif seg_type==ledpixels_T_FLASH:
 							seg_period = segment['period'] 
 							seg_progress = time_elapsed - seg_time 
-							seg_period_fit = (seg_progress * 10.0) % (seg_period % 10)
+							seg_period_fit = ((seg_progress * 10.0) % (seg_period * 10.0)) / 10.0
 
 							if seg_period_fit < seg_period / 2.0:
 								self.setpixelcolor(t, seg_color)
@@ -134,20 +164,10 @@ class Pixels():
 						index_marker[t] = d 
 
 				#We need to hit at least one segment and break, if not, set to black 
-				# self.setpixelcolor(t, Color_black) 
+				if not seg_wasSet:
+					self.setpixelcolor(t, Color_black) 
 						
 			
-
-					
-# One object:
-# [7.5,[[],[{"type":0,"time":6.5,"color":{"r":0,"g":0,"b":-509},"time_end":7.5}],[{"type":0,"time":0,"color":{"r":0,"g":0,"b":-509},"time_end":5.5}],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]    ]  ]
-					
- # @"type":[NSNumber numberWithInt:T_COLOR],
- #             @"color":@{@"r":[NSNumber numberWithInt:r], @"g":[NSNumber numberWithInt:g], @"b":[NSNumber numberWithInt:b]},
- #             @"time": [NSNumber numberWithDouble:time],
- #             @"time_end": [NSNumber numberWithDouble:time_end],
- #             };
-
 
 
 def Wheel(WheelPos):
@@ -161,6 +181,6 @@ def Wheel(WheelPos):
 		return Color(0, WheelPos * 3, 255 - WheelPos * 3)
 
 def Color(r, g, b):
-	return ((r & 0xFF) << 16) | ((g & 0xFF) << 8) | (b & 0xFF)
+	return ((int(r) & 0xFF) << 16) | ((int(g) & 0xFF) << 8) | (int(b) & 0xFF)
 
 Color_black = Color(0,0,0)
