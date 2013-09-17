@@ -15,15 +15,19 @@ I want a nice way to control my LED RGB pixels over my network; therefore, this 
 
 ## Underneath
 1. Web2py
+
 web2py is a free open source full-stack framework for rapid development of fast, scalable, secure and portable database-driven web-based applications. 
 Learn more at http://web2py.com
 
 2. Pixel Code (Python)
+
 https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code
 
 3. Operating System
+
 Occidentals is an enhanced version of Wheezy, the Debian derviation designed for Raspberry Pi. 
 http://learn.adafruit.com/adafruit-raspberry-pi-educational-linux-distro/occidentalis-v0-dot-2
 
 4. Hardware
+
 http://www.raspberrypi.org/
