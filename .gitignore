@@ -1,3 +1,4 @@
 ._*
 applications/led/databases/*
 applications/*/sessions/*
+applications/*/errors/*

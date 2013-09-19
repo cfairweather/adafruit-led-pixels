@@ -1,0 +1,659 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.ValueError'> No JSON object could be decoded"
+p3
+sS'layer'
+p4
+S'/home/www-data/web2py/applications/led/controllers/rpc.py'
+p5
+sS'code'
+p6
+S'from gluon.tools import Service\nfrom gluon.utils import web2py_uuid\n\nimport sys\nimport hashlib\nimport ast\nimport ssl\n\nfrom datetime import datetime\nimport thread\n\nfrom ledpixels import *\n\n\n\nservice = Service(globals())\nservice_public = Service(globals())\n@auth.requires_login()    \ndef call():\n    return service()\n\ndef call_public():\n    return service_public()\n\n@service.jsonrpc\ndef ledRunProgram(program):\n    print "ledRunProgram"\n    ret = dict()\n\n    duration = program[0]\n    data = program[1]\n\n    print str(duration)\n    print str(data)\n\n    pix = Pixels()\n    pix.run(data, duration) #def run(self, tracks, duration):\n    # thread.start_new_thread(ledRunProgram_Threaded,(data,duration))\n    print "DONE"\n        \n    return ret\n\ndef ledRunProgram_Threaded(data, duration):\n    pix = Pixels()\n    pix.run(data, duration) #def run(self, tracks, duration):\nresponse._vars=response._caller(call_public)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__hash__'
+p12
+S"<method-wrapper '__hash__' of exceptions.ValueError object>"
+p13
+sS'__setattr__'
+p14
+S"<method-wrapper '__setattr__' of exceptions.ValueError object>"
+p15
+sS'__reduce_ex__'
+p16
+S'<built-in method __reduce_ex__ of exceptions.ValueError object>'
+p17
+sS'__getslice__'
+p18
+S"<method-wrapper '__getslice__' of exceptions.ValueError object>"
+p19
+sS'__getitem__'
+p20
+S"<method-wrapper '__getitem__' of exceptions.ValueError object>"
+p21
+sS'__setstate__'
+p22
+S'<built-in method __setstate__ of exceptions.ValueError object>'
+p23
+sS'__reduce__'
+p24
+S'<built-in method __reduce__ of exceptions.ValueError object>'
+p25
+sS'__str__'
+p26
+S"<method-wrapper '__str__' of exceptions.ValueError object>"
+p27
+sS'__format__'
+p28
+S'<built-in method __format__ of exceptions.ValueError object>'
+p29
+sS'__getattribute__'
+p30
+S"<method-wrapper '__getattribute__' of exceptions.ValueError object>"
+p31
+sS'__class__'
+p32
+S"<type 'exceptions.ValueError'>"
+p33
+sS'__unicode__'
+p34
+S'<built-in method __unicode__ of exceptions.ValueError object>'
+p35
+sS'__delattr__'
+p36
+S"<method-wrapper '__delattr__' of exceptions.ValueError object>"
+p37
+sS'__subclasshook__'
+p38
+S'<built-in method __subclasshook__ of type object>'
+p39
+sS'__repr__'
+p40
+S"<method-wrapper '__repr__' of exceptions.ValueError object>"
+p41
+sS'args'
+p42
+S"('No JSON object could be decoded',)"
+p43
+sS'__dict__'
+p44
+S'{}'
+p45
+sS'__sizeof__'
+p46
+S'<built-in method __sizeof__ of exceptions.ValueError object>'
+p47
+sS'__doc__'
+p48
+S"'Inappropriate argument value (of correct type).'"
+p49
+sS'__init__'
+p50
+S"<method-wrapper '__init__' of exceptions.ValueError object>"
+p51
+sS'__new__'
+p52
+S'<built-in method __new__ of type object>'
+p53
+ssS'evalue'
+p54
+S'No JSON object could be decoded'
+p55
+sS'request'
+p56
+cgluon.html
+XML_unpickle
+p57
+(S's\xbbW\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top">ajax</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">application</td><td valign="top">:</td><td><div>led</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">args</td><td valign="top">:</td><td><div><table><tr><td><div>jsonrpc</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">body</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x4e2ae7c0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cid</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">client</td><td valign="top">:</td><td><div>192.168.0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">controller</td><td valign="top">:</td><td><div>rpc</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cookies</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">session_id_admin</td><td valign="top">:</td><td><div>192.168.0.7-2d6dbfb9-0ccc-41d8-a9c5-c2a10d14b5d7<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id_led</td><td valign="top">:</td><td><div>192.168.0.7-db9867eb-bb7f-4f57-b43b-7feceaee8c36<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">env</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">app_folders</td><td valign="top">:</td><td><div>set([&#x27;/home/www-data/web2py/applications/led/&#x27;, &#x27;/home/www-data/web2py/applications/admin/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">applications_parent</td><td valign="top">:</td><td><div>/home/www-data/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">db_sessions</td><td valign="top">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">debugging</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">document_root</td><td valign="top">:</td><td><div>/var/www</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">gateway_interface</td><td valign="top">:</td><td><div>CGI/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">gluon_parent</td><td valign="top">:</td><td><div>/home/www-data/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept</td><td valign="top">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept_encoding</td><td valign="top">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept_language</td><td valign="top">:</td><td><div>en-US,en;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_cache_control</td><td valign="top">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_connection</td><td valign="top">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_cookie</td><td valign="top">:</td><td><div>session_id_admin=192.168.0.7-2d6dbfb9-0ccc-41d8-a9c5-c2a10d14b5d7; session_id_led=192.168.0.7-db9867eb-bb7f-4f57-b43b-7feceaee8c36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_dnt</td><td valign="top">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_host</td><td valign="top">:</td><td><div>raspberrypi.local</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_user_agent</td><td valign="top">:</td><td><div>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.76 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">https</td><td valign="top">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_jython</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_pypy</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">local_hosts</td><td valign="top">:</td><td><div><table><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>raspberrypi</div></td></tr><tr><td><div>raspberrypi.local</div></td></tr><tr><td><div>192.168.0.17</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi_application_group</td><td valign="top">:</td><td><div>127.0.1.1|</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi_callable_object</td><td valign="top">:</td><td><div>application</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi_handler_script</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi_input_chunked</td><td valign="top">:</td><td><div>0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi_listener_host</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi_listener_port</td><td valign="top">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi_process_group</td><td valign="top">:</td><td><div>web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi_request_handler</td><td valign="top">:</td><td><div>wsgi-script</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi_script_reloading</td><td valign="top">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi_version</td><td valign="top">:</td><td><div><table><tr><td><div>3</div></td></tr><tr><td><div>3</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path_info</td><td valign="top">:</td><td><div>/led/rpc/call_public/jsonrpc</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path_translated</td><td valign="top">:</td><td><div>/home/www-data/web2py/wsgihandler.py/led/rpc/call_public/jsonrpc</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">query_string</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">remote_addr</td><td valign="top">:</td><td><div>192.168.0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">remote_port</td><td valign="top">:</td><td><div>50288</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">request_method</td><td valign="top">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">request_uri</td><td valign="top">:</td><td><div>/led/rpc/call_public/jsonrpc</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">script_filename</td><td valign="top">:</td><td><div>/home/www-data/web2py/wsgihandler.py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">script_name</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_addr</td><td valign="top">:</td><td><div>192.168.0.17</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_admin</td><td valign="top">:</td><td><div>[no address given]</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_name</td><td valign="top">:</td><td><div>raspberrypi.local</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_port</td><td valign="top">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_protocol</td><td valign="top">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_signature</td><td valign="top">:</td><td><div>&lt;address&gt;Apache/2.2.22 (Debian) Server at raspberrypi.local Port 443&lt;/address&gt;\n</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_software</td><td valign="top">:</td><td><div>Apache/2.2.22 (Debian)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">ssl_tls_sni</td><td valign="top">:</td><td><div>raspberrypi.local</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_path</td><td valign="top">:</td><td><div>/home/www-data/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_version</td><td valign="top">:</td><td><div>2.5.1-stable+timestamp.2013.06.06.15.39.19</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_errors</td><td valign="top">:</td><td><div>&lt;mod_wsgi.Log object at 0x4e58ec00&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_file_wrapper</td><td valign="top">:</td><td><div>&lt;built-in method file_wrapper of mod_wsgi.Adapter object at 0x4e592f98&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_input</td><td valign="top">:</td><td><div>&lt;mod_wsgi.Input object at 0x4e58eb88&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_multiprocess</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_multithread</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_run_once</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_url_scheme</td><td valign="top">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_version</td><td valign="top">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>1</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">extension</td><td valign="top">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">folder</td><td valign="top">:</td><td><div>/home/www-data/web2py/applications/led/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">function</td><td valign="top">:</td><td><div>call_public</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">get_vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">global_settings</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">app_folders</td><td valign="top">:</td><td><div>set([&#x27;/home/www-data/web2py/applications/led/&#x27;, &#x27;/home/www-data/web2py/applications/admin/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">applications_parent</td><td valign="top">:</td><td><div>/home/www-data/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">db_sessions</td><td valign="top">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">debugging</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">gluon_parent</td><td valign="top">:</td><td><div>/home/www-data/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_jython</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_pypy</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">local_hosts</td><td valign="top">:</td><td><div><table><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>raspberrypi</div></td></tr><tr><td><div>raspberrypi.local</div></td></tr><tr><td><div>192.168.0.17</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_version</td><td valign="top">:</td><td><div>2.5.1-stable+timestamp.2013.06.06.15.39.19</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_https</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_local</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_restful</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">now</td><td valign="top">:</td><td><div>datetime.datetime(2013, 9, 18, 22, 6, 34, 948368)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">post_vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">raw_args</td><td valign="top">:</td><td><div>jsonrpc</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">raw_extension</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">url</td><td valign="top">:</td><td><div>/led/rpc/call_public/jsonrpc</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">utcnow</td><td valign="top">:</td><td><div>datetime.datetime(2013, 9, 19, 5, 6, 34, 948572)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uuid</td><td valign="top">:</td><td><div>led/192.168.0.7.2013-09-18.22-06-34.9b8731d0-9b80-4572-9c6c-9a0a0b452293</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">environ</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">DOCUMENT_ROOT</td><td valign="top">:</td><td><div>/var/www</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">GATEWAY_INTERFACE</td><td valign="top">:</td><td><div>CGI/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTPS</td><td valign="top">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT</td><td valign="top">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT_ENCODING</td><td valign="top">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT_LANGUAGE</td><td valign="top">:</td><td><div>en-US,en;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_CACHE_CONTROL</td><td valign="top">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_CONNECTION</td><td valign="top">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_COOKIE</td><td valign="top">:</td><td><div>session_id_admin=192.168.0.7-2d6dbfb9-0ccc-41d8-a9c5-c2a10d14b5d7; session_id_led=192.168.0.7-db9867eb-bb7f-4f57-b43b-7feceaee8c36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_DNT</td><td valign="top">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_HOST</td><td valign="top">:</td><td><div>raspberrypi.local</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_USER_AGENT</td><td valign="top">:</td><td><div>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.76 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">PATH_INFO</td><td valign="top">:</td><td><div>/led/rpc/call_public/jsonrpc</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">PATH_TRANSLATED</td><td valign="top">:</td><td><div>/home/www-data/web2py/wsgihandler.py/led/rpc/call_public/jsonrpc</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">QUERY_STRING</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REMOTE_ADDR</td><td valign="top">:</td><td><div>192.168.0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REMOTE_PORT</td><td valign="top">:</td><td><div>50288</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REQUEST_METHOD</td><td valign="top">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REQUEST_URI</td><td valign="top">:</td><td><div>/led/rpc/call_public/jsonrpc</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SCRIPT_FILENAME</td><td valign="top">:</td><td><div>/home/www-data/web2py/wsgihandler.py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SCRIPT_NAME</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_ADDR</td><td valign="top">:</td><td><div>192.168.0.17</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_ADMIN</td><td valign="top">:</td><td><div>[no address given]</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_NAME</td><td valign="top">:</td><td><div>raspberrypi.local</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_PORT</td><td valign="top">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_PROTOCOL</td><td valign="top">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_SIGNATURE</td><td valign="top">:</td><td><div>&lt;address&gt;Apache/2.2.22 (Debian) Server at raspberrypi.local Port 443&lt;/address&gt;\n</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_SOFTWARE</td><td valign="top">:</td><td><div>Apache/2.2.22 (Debian)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SSL_TLS_SNI</td><td valign="top">:</td><td><div>raspberrypi.local</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi.application_group</td><td valign="top">:</td><td><div>127.0.1.1|</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi.callable_object</td><td valign="top">:</td><td><div>application</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi.handler_script</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi.input_chunked</td><td valign="top">:</td><td><div>0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi.listener_host</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi.listener_port</td><td valign="top">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi.process_group</td><td valign="top">:</td><td><div>web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi.request_handler</td><td valign="top">:</td><td><div>wsgi-script</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi.script_reloading</td><td valign="top">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">mod_wsgi.version</td><td valign="top">:</td><td><div><table><tr><td><div>3</div></td></tr><tr><td><div>3</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.errors</td><td valign="top">:</td><td><div>&lt;mod_wsgi.Log object at 0x4e58ec00&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.file_wrapper</td><td valign="top">:</td><td><div>&lt;built-in method file_wrapper of mod_wsgi.Adapter object at 0x4e592f98&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.input</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x4e2ae7c0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.multiprocess</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.multithread</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.run_once</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.url_scheme</td><td valign="top">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.version</td><td valign="top">:</td><td><div>1</div></td></tr></table></div></td></tr></table></div></td></tr></table></div>'
+tRp58
+sS'frames'
+p59
+(lp60
+(dp61
+S'file'
+p62
+S'/home/www-data/web2py/gluon/restricted.py'
+p63
+sS'dump'
+p64
+(dp65
+S'environment'
+p66
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, 'CENTER': <class 'gluon.html.CENTER'>, ...}"
+p67
+sS'ccode'
+p68
+S'<code object <module> at 0x4e2c00b0, file "/home...2py/applications/led/controllers/rpc.py", line 1>'
+p69
+ssS'lnum'
+p70
+I212
+sS'lines'
+p71
+(dp72
+I207
+S'    try:'
+p73
+sI208
+S'        if isinstance(code, types.CodeType):'
+p74
+sI209
+S'            ccode = code'
+p75
+sI210
+S'        else:'
+p76
+sI211
+S'            ccode = compile2(code, layer)'
+p77
+sI212
+S'        exec ccode in environment'
+p78
+sI213
+S'    except HTTP:'
+p79
+sI214
+S'        raise'
+p80
+sI215
+S'    except RestrictedError:'
+p81
+sI216
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p82
+ssS'call'
+p83
+S"(code='from gluon.tools import Service\\nfrom gluon.utils...n):\\nresponse._vars=response._caller(call_public)\\n', environment={'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, 'CENTER': <class 'gluon.html.CENTER'>, ...}, layer='/home/www-data/web2py/applications/led/controllers/rpc.py')"
+p84
+sS'func'
+p85
+S'restricted'
+p86
+sa(dp87
+g62
+S'/home/www-data/web2py/applications/led/controllers/rpc.py'
+p88
+sg64
+(dp89
+sg70
+I46
+sg71
+(dp90
+I36
+S'    pix = Pixels()'
+p91
+sI37
+S'    pix.run(data, duration) #def run(self, tracks, duration):'
+p92
+sI38
+S'    # thread.start_new_thread(ledRunProgram_Threaded,(data,duration))'
+p93
+sI39
+S'    print "DONE"'
+p94
+sI40
+S''
+sI41
+S'    return ret'
+p95
+sI42
+S''
+sI43
+S'def ledRunProgram_Threaded(data, duration):'
+p96
+sI44
+S'    pix = Pixels()'
+p97
+sI45
+S'    pix.run(data, duration) #def run(self, tracks, duration):'
+p98
+ssg83
+S'()'
+p99
+sg85
+S'<module>'
+p100
+sa(dp101
+g62
+S'/home/www-data/web2py/gluon/globals.py'
+p102
+sg64
+(dp103
+S'self'
+p104
+S'undefined'
+p105
+sS'f'
+S'<function call_public>'
+p106
+ssg70
+I194
+sg71
+(dp107
+I192
+S"        self.delimiters = ('{{', '}}')"
+p108
+sI193
+S'        self._vars = None'
+p109
+sI194
+S'        self._caller = lambda f: f()'
+p110
+sI195
+S'        self._view_environment = None'
+p111
+sI196
+S'        self._custom_commit = None'
+p112
+sI197
+S'        self._custom_rollback = None'
+p113
+sI198
+S''
+sI189
+S'        self.menu = []             # used by the default view layout'
+p114
+sI190
+S'        self.files = []            # used by web2py_ajax.html'
+p115
+sI191
+S'        self.generic_patterns = []  # patterns to allow generic views'
+p116
+ssg83
+S'(f=<function call_public>)'
+p117
+sg85
+S'<lambda>'
+p118
+sa(dp119
+g62
+S'/home/www-data/web2py/applications/led/controllers/rpc.py'
+p120
+sg64
+(dp121
+S'global service_public'
+p122
+S'<gluon.tools.Service object>'
+p123
+ssg70
+I23
+sg71
+(dp124
+I18
+S'@auth.requires_login()'
+p125
+sI19
+S'def call():'
+p126
+sI20
+S'    return service()'
+p127
+sI21
+S''
+sI22
+S'def call_public():'
+p128
+sI23
+S'    return service_public()'
+p129
+sI24
+S''
+sI25
+S'@service.jsonrpc'
+p130
+sI26
+S'def ledRunProgram(program):'
+p131
+sI27
+S'    print "ledRunProgram"'
+p132
+ssg83
+S'()'
+p133
+sg85
+S'call_public'
+p134
+sa(dp135
+g62
+S'/home/www-data/web2py/gluon/tools.py'
+p136
+sg64
+(dp137
+S'self.serve_jsonrpc'
+p138
+S'<bound method Service.serve_jsonrpc of <gluon.tools.Service object>>'
+p139
+sS'self'
+p140
+S'<gluon.tools.Service object>'
+p141
+ssg70
+I4701
+sg71
+(dp142
+I4704
+S"        elif arg0 == 'xmlrpc':"
+p143
+sI4705
+S'            return self.serve_xmlrpc()'
+p144
+sI4696
+S"        elif arg0 == 'xml':"
+p145
+sI4697
+S'            return self.serve_xml(request.args[1:])'
+p146
+sI4698
+S"        elif arg0 == 'json':"
+p147
+sI4699
+S'            return self.serve_json(request.args[1:])'
+p148
+sI4700
+S"        elif arg0 == 'jsonrpc':"
+p149
+sI4701
+S'            return self.serve_jsonrpc()'
+p150
+sI4702
+S"        elif arg0 == 'jsonrpc2':"
+p151
+sI4703
+S'            return self.serve_jsonrpc2()'
+p152
+ssg83
+S'(self=<gluon.tools.Service object>)'
+p153
+sg85
+S'__call__'
+p154
+sa(dp155
+g62
+S'/home/www-data/web2py/gluon/tools.py'
+p156
+sg64
+(dp157
+S'global json_parser'
+p158
+S"<module 'json' from '/usr/lib/python2.7/json/__init__.pyc'>"
+p159
+sS'request'
+p160
+S"<Storage {'function': 'call_public', 'body': <cS...y/applications/led/', 'post_vars': <Storage {}>}>"
+p161
+sS'request.body.read'
+p162
+S'<built-in method read of cStringIO.StringO object>'
+p163
+sS'request.body'
+p164
+S'<cStringIO.StringO object>'
+p165
+sS'json_parser.loads'
+p166
+S'<function loads>'
+p167
+sS'data'
+p168
+g105
+ssg70
+I4422
+sg71
+(dp169
+I4417
+S''
+sI4418
+S'        request = current.request'
+p170
+sI4419
+S'        response = current.response'
+p171
+sI4420
+S"        response.headers['Content-Type'] = 'application/json; charset=utf-8'"
+p172
+sI4421
+S'        methods = self.jsonrpc_procedures'
+p173
+sI4422
+S'        data = json_parser.loads(request.body.read())'
+p174
+sI4423
+S"        jsonrpc_2 = data.get('jsonrpc')"
+p175
+sI4424
+S'        if jsonrpc_2: #hand over to version 2 of the protocol'
+p176
+sI4425
+S'            return self.serve_jsonrpc2(data)'
+p177
+sI4426
+S"        id, method, params = data['id'], data['method'], data.get('params', '')"
+p178
+ssg83
+S'(self=<gluon.tools.Service object>)'
+p179
+sg85
+S'serve_jsonrpc'
+p180
+sa(dp181
+g62
+S'/usr/lib/python2.7/json/__init__.py'
+p182
+sg64
+(dp183
+S's'
+S"''"
+p184
+sS'global _default_decoder'
+p185
+S'<json.decoder.JSONDecoder object>'
+p186
+sS'_default_decoder.decode'
+p187
+S'<bound method JSONDecoder.decode of <json.decoder.JSONDecoder object>>'
+p188
+ssg70
+I326
+sg71
+(dp189
+I321
+S''
+sI322
+S'    """'
+p190
+sI323
+S'    if (cls is None and encoding is None and object_hook is None and'
+p191
+sI324
+S'            parse_int is None and parse_float is None and'
+p192
+sI325
+S'            parse_constant is None and object_pairs_hook is None and not kw):'
+p193
+sI326
+S'        return _default_decoder.decode(s)'
+p194
+sI327
+S'    if cls is None:'
+p195
+sI328
+S'        cls = JSONDecoder'
+p196
+sI329
+S'    if object_hook is not None:'
+p197
+sI330
+S"        kw['object_hook'] = object_hook"
+p198
+ssg83
+S"(s='', encoding=None, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw={})"
+p199
+sg85
+S'loads'
+p200
+sa(dp201
+g62
+S'/usr/lib/python2.7/json/decoder.py'
+p202
+sg64
+(dp203
+S').end'
+p204
+g105
+sS'end'
+p205
+g105
+sS'idx'
+p206
+g105
+sS'_w'
+p207
+S'<built-in method match of _sre.SRE_Pattern object>'
+p208
+sS'self'
+p209
+S'<json.decoder.JSONDecoder object>'
+p210
+sS's'
+S"''"
+p211
+sS'self.raw_decode'
+p212
+S'<bound method JSONDecoder.raw_decode of <json.decoder.JSONDecoder object>>'
+p213
+sS'obj'
+p214
+g105
+ssg70
+I365
+sg71
+(dp215
+I360
+S'    def decode(self, s, _w=WHITESPACE.match):'
+p216
+sI361
+S'        """Return the Python representation of ``s`` (a ``str`` or ``unicode``'
+p217
+sI362
+S'        instance containing a JSON document)'
+p218
+sI363
+S''
+sI364
+S'        """'
+p219
+sI365
+S'        obj, end = self.raw_decode(s, idx=_w(s, 0).end())'
+p220
+sI366
+S'        end = _w(s, end).end()'
+p221
+sI367
+S'        if end != len(s):'
+p222
+sI368
+S'            raise ValueError(errmsg("Extra data", s, end, len(s)))'
+p223
+sI369
+S'        return obj'
+p224
+ssg83
+S"(self=<json.decoder.JSONDecoder object>, s='', _w=<built-in method match of _sre.SRE_Pattern object>)"
+p225
+sg85
+S'decode'
+p226
+sa(dp227
+g62
+S'/usr/lib/python2.7/json/decoder.py'
+p228
+sg64
+(dp229
+S'builtinValueError'
+p230
+S"<type 'exceptions.ValueError'>"
+p231
+ssg70
+I383
+sg71
+(dp232
+I384
+S'        return obj, end'
+p233
+sI375
+S''
+sI376
+S'        This can be used to decode a JSON document from a string that may'
+p234
+sI377
+S'        have extraneous data at the end.'
+p235
+sI378
+S''
+sI379
+S'        """'
+p236
+sI380
+S'        try:'
+p237
+sI381
+S'            obj, end = self.scan_once(s, idx)'
+p238
+sI382
+S'        except StopIteration:'
+p239
+sI383
+S'            raise ValueError("No JSON object could be decoded")'
+p240
+ssg83
+S"(self=<json.decoder.JSONDecoder object>, s='', idx=0)"
+p241
+sg85
+S'raw_decode'
+p242
+sasS'pyver'
+p243
+S'Python 2.7.3: /usr/bin/python (prefix: /usr)'
+p244
+sS'session'
+p245
+g57
+(S's\x8b\x08\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top">auth</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">expiration</td><td valign="top">:</td><td><div>3600</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">hmac_key</td><td valign="top">:</td><td><div>5573554a-0500-4c19-b610-b62ba212e654</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">last_visit</td><td valign="top">:</td><td><div>datetime.datetime(2013, 9, 18, 22, 6, 34, 948368)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">remember</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">user</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">email</td><td valign="top">:</td><td><div>cfairweather@cfairweather.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">first_name</td><td valign="top">:</td><td><div>Cristoffer</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">id</td><td valign="top">:</td><td><div>1L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">last_name</td><td valign="top">:</td><td><div>Fairweather</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">registration_id</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">registration_key</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">reset_password_key</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">user_groups</td><td valign="top">:</td><td><div><table></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">flash</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">last_orderby</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">last_query</td><td valign="top">:</td><td><div>db.auth_user.id&gt;0</div></td></tr></table></div>'
+tRp246
+sS'etype'
+p247
+S"<type 'exceptions.ValueError'>"
+p248
+sS'date'
+p249
+S'Wed Sep 18 22:06:35 2013'
+p250
+sS'response'
+p251
+g57
+(S's\xcd,\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top">body</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x4e2ae4e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cookies</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">session_id_led</td><td valign="top">:</td><td><div>192.168.0.7-db9867eb-bb7f-4f57-b43b-7feceaee8c36<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">delimiters</td><td valign="top">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">files</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">flash</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">generic_patterns</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">google_analytics_id</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">headers</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">Content-Type</td><td valign="top">:</td><td><div>application/json; charset=utf-8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">X-Powered-By</td><td valign="top">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">logo</td><td valign="top">:</td><td><div><a class="brand" href="http://www.web2py.com/"><b>web<span>2</span>py</b>&trade;&nbsp;</a></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">menu</td><td valign="top">:</td><td><div><table><tr><td><div><table><tr><td><div>Home</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/led/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div><span class="highlighted">web2py</span></div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>My Sites</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>This App</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design/led</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Controller&#x27;&gt;, False, &#x27;/admin/default/edit/led/controllers/rpc.py&#x27;), (&lt;lazyT &#x27;View&#x27;&gt;, False, &#x27;/admin/default/edit/led/views/rpc/call_public.html&#x27;), (&lt;lazyT &#x27;Layout&#x27;&gt;, False, &#x27;/admin/default/edit/led/views/layout.html&#x27;), (&lt;lazyT &#x27;Stylesheet&#x27;&gt;, False, &#x27;/admin/default/edit/led/static/css/web2py.css&#x27;), (&lt;lazyT &#x27;DB Model&#x27;&gt;, False, &#x27;/admin/default/edit/led/models/db.py&#x27;), (&lt;lazyT &#x27;Menu Model&#x27;&gt;, False, &#x27;/admin/default/edit/led/models/menu.py&#x27;), (&lt;lazyT &#x27;Database&#x27;&gt;, False, &#x27;/led/appadmin/index&#x27;), (&lt;lazyT &#x27;Errors&#x27;&gt;, False, &#x27;/admin/default/errors/led&#x27;), (&lt;lazyT &#x27;About&#x27;&gt;, False, &#x27;/admin/default/about/led&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>web2py.com</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Download&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/download&#x27;), (&lt;lazyT &#x27;Support&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/support&#x27;), (&lt;lazyT &#x27;Demo&#x27;&gt;, False, &#x27;http://web2py.com/demo_admin&#x27;), (&lt;lazyT &#x27;Quick Examples&#x27;&gt;, False, &#x27;http://web2py.com/examples/default/examples&#x27;), (&lt;lazyT &#x27;FAQ&#x27;&gt;, False, &#x27;http://web2py.com/AlterEgo&#x27;), (&lt;lazyT &#x27;Videos&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/videos/&#x27;), (&lt;lazyT &#x27;Free Applications&#x27;&gt;, False, &#x27;http://web2py.com/appliances&#x27;), (&lt;lazyT &#x27;Plugins&#x27;&gt;, False, &#x27;http://web2py.com/plugins&#x27;), (&lt;lazyT &#x27;Layouts&#x27;&gt;, False, &#x27;http://web2py.com/layouts&#x27;), (&lt;lazyT &#x27;Recipes&#x27;&gt;, False, &#x27;http://web2pyslices.com/&#x27;), (&lt;lazyT &#x27;Semantic&#x27;&gt;, False, &#x27;http://web2py.com/semantic&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Documentation</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Preface&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/00&#x27;), (&lt;lazyT &#x27;Introduction&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/01&#x27;), (&lt;lazyT &#x27;Python&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/02&#x27;), (&lt;lazyT &#x27;Overview&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/03&#x27;), (&lt;lazyT &#x27;The Core&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/04&#x27;), (&lt;lazyT &#x27;The Views&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/05&#x27;), (&lt;lazyT &#x27;Database&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/06&#x27;), (&lt;lazyT &#x27;Forms and Validators&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/07&#x27;), (&lt;lazyT &#x27;Email and SMS&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/08&#x27;), (&lt;lazyT &#x27;Access Control&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/09&#x27;), (&lt;lazyT &#x27;Services&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/10&#x27;), (&lt;lazyT &#x27;Ajax Recipes&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/11&#x27;), (&lt;lazyT &#x27;Components and Plugins&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/12&#x27;), (&lt;lazyT &#x27;Deployment Recipes&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/13&#x27;), (&lt;lazyT &#x27;Other Recipes&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/14&#x27;), (&lt;lazyT &#x27;Buy this book&#x27;&gt;, False, &#x27;http://stores.lulu.com/web2py&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Community</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Groups&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/usergroups&#x27;), (&lt;lazyT &#x27;Twitter&#x27;&gt;, False, &#x27;http://twitter.com/web2py&#x27;), (&lt;lazyT &#x27;Live Chat&#x27;&gt;, False, &#x27;http://webchat.freenode.net/?channels=web2py&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div>[(&#x27;plugin_wiki&#x27;, False, &#x27;http://web2py.com/examples/default/download&#x27;), (&lt;lazyT &#x27;Other Plugins&#x27;&gt;, False, &#x27;http://web2py.com/plugins&#x27;), (&lt;lazyT &#x27;Layout Plugins&#x27;&gt;, False, &#x27;http://web2py.com/layouts&#x27;)]</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">meta</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">author</td><td valign="top">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">description</td><td valign="top">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">generator</td><td valign="top">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">keywords</td><td valign="top">:</td><td><div>web2py, python, framework</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">models_to_run</td><td valign="top">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^rpc/\\w+\\.py$</div></td></tr><tr><td><div>^rpc/call_public/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">postprocessing</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_cookie_expires</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_data_name</td><td valign="top">:</td><td><div>session_data_led</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_file</td><td valign="top">:</td><td><div>&lt;open file &#x27;/home/www-data/web2py/applications/led/sessions/192.168.0.7-db9867eb-bb7f-4f57-b43b-7feceaee8c36&#x27;, mode &#x27;rb+&#x27; at 0x4e1c55f8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_filename</td><td valign="top">:</td><td><div>/home/www-data/web2py/applications/led/sessions/192.168.0.7-db9867eb-bb7f-4f57-b43b-7feceaee8c36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id</td><td valign="top">:</td><td><div>192.168.0.7-db9867eb-bb7f-4f57-b43b-7feceaee8c36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id_name</td><td valign="top">:</td><td><div>session_id_led</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_locked</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_new</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_storage_type</td><td valign="top">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">status</td><td valign="top">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">subtitle</td><td valign="top">:</td><td><div>customize me!</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">title</td><td valign="top">:</td><td><div>Led</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">view</td><td valign="top">:</td><td><div>rpc/call_public.html</div></td></tr></table></div>'
+tRp252
+sS'locals'
+p253
+(dp254
+S's'
+S"''"
+p255
+sS'self'
+p256
+S'<json.decoder.JSONDecoder object>'
+p257
+sS'idx'
+p258
+S'0'
+sssS'traceback'
+p259
+S'Traceback (most recent call last):\n  File "/home/www-data/web2py/gluon/restricted.py", line 212, in restricted\n    exec ccode in environment\n  File "/home/www-data/web2py/applications/led/controllers/rpc.py", line 46, in <module>\n  File "/home/www-data/web2py/gluon/globals.py", line 194, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/www-data/web2py/applications/led/controllers/rpc.py", line 23, in call_public\n    return service_public()\n  File "/home/www-data/web2py/gluon/tools.py", line 4701, in __call__\n    return self.serve_jsonrpc()\n  File "/home/www-data/web2py/gluon/tools.py", line 4422, in serve_jsonrpc\n    data = json_parser.loads(request.body.read())\n  File "/usr/lib/python2.7/json/__init__.py", line 326, in loads\n    return _default_decoder.decode(s)\n  File "/usr/lib/python2.7/json/decoder.py", line 365, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n  File "/usr/lib/python2.7/json/decoder.py", line 383, in raw_decode\n    raise ValueError("No JSON object could be decoded")\nValueError: No JSON object could be decoded\n'
+p260
+s.
