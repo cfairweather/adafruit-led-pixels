@@ -11,10 +11,9 @@ import thread
 
 from ledpixels import *
 
-
-
 service = Service(globals())
 service_public = Service(globals())
+
 @auth.requires_login()    
 def call():
     return service()
@@ -23,20 +22,16 @@ def call_public():
     return service_public()
 
 @service_public.jsonrpc
-def ledRunProgram(program):
+def ledRunProgram(duration, program):
     print "ledRunProgram"
     ret = dict()
 
-    duration = program[0]
-    data = program[1]
-
     print str(duration)
-    print str(data)
+    print str(program)
 
     pix = Pixels()
-    pix.run(data, duration) #def run(self, tracks, duration):
-    # thread.start_new_thread(ledRunProgram_Threaded,(data,duration))
-    print "DONE"
+    # pix.run(program, duration) #def run(self, tracks, duration):
+    thread.start_new_thread(ledRunProgram_Threaded,(program,duration))
         
     return ret
 
@@ -45,9 +40,13 @@ def ledRunProgram_Threaded(data, duration):
     pix.run(data, duration) #def run(self, tracks, duration):
 
 
-@service.jsonrpc
+@service_public.jsonrpc
 def led_login(username, password):
-    print "login"
     ret = dict()
-    ret['success'] = auth.login_bare(username, password)
+    if auth.login_bare(str(username), str(password)) is not False:
+        print "iPad Login success"
+        ret['success'] = True
+    else:
+        print "iPad Login fail"
+        ret['success'] = False
     return ret

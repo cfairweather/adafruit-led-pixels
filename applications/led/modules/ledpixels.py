@@ -6,8 +6,10 @@ import time
 
 
 ledpixels_T_COLOR = 0;
-ledpixels_T_GRADI = 1;
-ledpixels_T_FLASH = 2;
+ledpixels_T_GRADI = 1; #color_end
+ledpixels_T_FLASH = 2; #period
+ledpixels_T_CHASE = 3; #period, #pixel_from, #pixel_to
+ledpixels_T_CHASE_GRAD = 4; #period, #pixel_from, #pixel_to, #color_end
 
 ledpixels_demo_basic = [
 		[{"type":ledpixels_T_COLOR,"time":0,"color":{"r":255,"g":0,"b":0},"time_end":3}],
@@ -93,6 +95,120 @@ ledpixels_demo_chasing_flashing = [
 		]
 
 
+ledpixels_demo_police = [
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.0,"color":{"r":255,"g":0,"b":0},"time_end":0.5}, {"type":ledpixels_T_FLASH, "period":0.05,"time":1.0,"color":{"r":255,"g":0,"b":0},"time_end":1.5},{"type":ledpixels_T_FLASH, "period":0.05,"time":2.0,"color":{"r":255,"g":0,"b":0},"time_end":2.5}, {"type":ledpixels_T_FLASH, "period":0.05,"time":3.0,"color":{"r":255,"g":0,"b":0},"time_end":3.5}],
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.0,"color":{"r":255,"g":0,"b":0},"time_end":0.5}, {"type":ledpixels_T_FLASH, "period":0.05,"time":1.0,"color":{"r":255,"g":0,"b":0},"time_end":1.5},{"type":ledpixels_T_FLASH, "period":0.05,"time":2.0,"color":{"r":255,"g":0,"b":0},"time_end":2.5}, {"type":ledpixels_T_FLASH, "period":0.05,"time":3.0,"color":{"r":255,"g":0,"b":0},"time_end":3.5}],
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.0,"color":{"r":255,"g":0,"b":0},"time_end":0.5}, {"type":ledpixels_T_FLASH, "period":0.05,"time":1.0,"color":{"r":255,"g":0,"b":0},"time_end":1.5},{"type":ledpixels_T_FLASH, "period":0.05,"time":2.0,"color":{"r":255,"g":0,"b":0},"time_end":2.5}, {"type":ledpixels_T_FLASH, "period":0.05,"time":3.0,"color":{"r":255,"g":0,"b":0},"time_end":3.5}],
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.0,"color":{"r":255,"g":0,"b":0},"time_end":0.5}, {"type":ledpixels_T_FLASH, "period":0.05,"time":1.0,"color":{"r":255,"g":0,"b":0},"time_end":1.5},{"type":ledpixels_T_FLASH, "period":0.05,"time":2.0,"color":{"r":255,"g":0,"b":0},"time_end":2.5}, {"type":ledpixels_T_FLASH, "period":0.05,"time":3.0,"color":{"r":255,"g":0,"b":0},"time_end":3.5}],
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.0,"color":{"r":255,"g":0,"b":0},"time_end":0.5}, {"type":ledpixels_T_FLASH, "period":0.05,"time":1.0,"color":{"r":255,"g":0,"b":0},"time_end":1.5},{"type":ledpixels_T_FLASH, "period":0.05,"time":2.0,"color":{"r":255,"g":0,"b":0},"time_end":2.5}, {"type":ledpixels_T_FLASH, "period":0.05,"time":3.0,"color":{"r":255,"g":0,"b":0},"time_end":3.5}],
+		
+		
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_CHASE,"period":0.033333333333333,"pixel_from":5, "pixel_to":19,  "time":0.0,"color":{"r":255,"g":255,"b":255},"time_end":4.0}],
+
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.5,"color":{"r":0,"g":0,"b":255},"time_end":1.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":1.5,"color":{"r":0,"g":0,"b":255},"time_end":2.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":2.5,"color":{"r":0,"g":0,"b":255},"time_end":3.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":3.5,"color":{"r":0,"g":0,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.5,"color":{"r":0,"g":0,"b":255},"time_end":1.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":1.5,"color":{"r":0,"g":0,"b":255},"time_end":2.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":2.5,"color":{"r":0,"g":0,"b":255},"time_end":3.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":3.5,"color":{"r":0,"g":0,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.5,"color":{"r":0,"g":0,"b":255},"time_end":1.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":1.5,"color":{"r":0,"g":0,"b":255},"time_end":2.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":2.5,"color":{"r":0,"g":0,"b":255},"time_end":3.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":3.5,"color":{"r":0,"g":0,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.5,"color":{"r":0,"g":0,"b":255},"time_end":1.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":1.5,"color":{"r":0,"g":0,"b":255},"time_end":2.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":2.5,"color":{"r":0,"g":0,"b":255},"time_end":3.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":3.5,"color":{"r":0,"g":0,"b":255},"time_end":4.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.5,"color":{"r":0,"g":0,"b":255},"time_end":1.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":1.5,"color":{"r":0,"g":0,"b":255},"time_end":2.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":2.5,"color":{"r":0,"g":0,"b":255},"time_end":3.0}, {"type":ledpixels_T_FLASH, "period":0.05,"time":3.5,"color":{"r":0,"g":0,"b":255},"time_end":4.0}],
+		]
+
+ledpixels_demo_mindfuck = [
+		[{"type":ledpixels_T_FLASH, "period":0.05,"time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.06,"time":0.0,"color":{"r":100,"g":100,"b":110},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.07,"time":0.0,"color":{"r":100,"g":100,"b":120},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.08,"time":0.0,"color":{"r":100,"g":100,"b":130},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.09,"time":0.0,"color":{"r":100,"g":100,"b":140},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.10,"time":0.0,"color":{"r":100,"g":100,"b":150},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.11,"time":0.0,"color":{"r":100,"g":100,"b":160},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.12,"time":0.0,"color":{"r":100,"g":100,"b":170},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.13,"time":0.0,"color":{"r":100,"g":100,"b":180},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.14,"time":0.0,"color":{"r":100,"g":100,"b":190},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.15,"time":0.0,"color":{"r":100,"g":110,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.16,"time":0.0,"color":{"r":100,"g":120,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.17,"time":0.0,"color":{"r":100,"g":130,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.18,"time":0.0,"color":{"r":100,"g":140,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.19,"time":0.0,"color":{"r":100,"g":150,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.20,"time":0.0,"color":{"r":100,"g":160,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.21,"time":0.0,"color":{"r":100,"g":170,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.22,"time":0.0,"color":{"r":100,"g":180,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.23,"time":0.0,"color":{"r":100,"g":190,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.24,"time":0.0,"color":{"r":110,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.25,"time":0.0,"color":{"r":120,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.26,"time":0.0,"color":{"r":130,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.27,"time":0.0,"color":{"r":140,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.28,"time":0.0,"color":{"r":150,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_FLASH, "period":0.29,"time":0.0,"color":{"r":160,"g":100,"b":100},"time_end":5.0}],
+		]
+
+ledpixels_demo_chasing_feature = [
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE, "period":0.02,"pixel_from":0, "pixel_to":24, "time":0.0,"color":{"r":100,"g":100,"b":100},"time_end":5.0}],
+		]
+
+ledpixels_demo_chasing_gradient = [
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		[{"type":ledpixels_T_CHASE_GRAD, "period":0.05,"pixel_from":1, "pixel_to":20, "time":0.0,"color":{"r":255,"g":0,"b":0},"color_end":{"r":0,"g":0,"b":255},"time_end":5.0}],
+		]
 
 
 class Pixels():
@@ -105,6 +221,10 @@ class Pixels():
 			{"name":"Basic", "data":ledpixels_demo_basic, "duration":9},
 			{"name":"Chasing Lights", "data":ledpixels_demo_chasing_lights, "duration":6},
 			{"name":"Flashing Chasing Lights", "data":ledpixels_demo_chasing_flashing, "duration":6},
+			{"name":"Flashing Police", "data":ledpixels_demo_police, "duration":4.0},
+			{"name":"Flashing Mindfuck", "data":ledpixels_demo_mindfuck, "duration":5.0},
+			{"name":"Chasing Simple", "data":ledpixels_demo_chasing_feature, "duration":5.1},
+			{"name":"Chasing Gradient", "data":ledpixels_demo_chasing_gradient, "duration":5.1},
 		]
 
 		# self.colorwipe(Color(255, 0, 0), 0.001)
@@ -158,7 +278,8 @@ class Pixels():
 	def example(self):
 		self.run(ledpixels_demo_basic, 8)
 
-	def demo_do(self, index):
+	def demo(self, index):
+		print "Playing demo: "+self.demos[index]['name']
 		self.run(self.demos[index]['data'], self.demos[index]['duration'])
 
 	def run(self, tracks, duration):
@@ -186,9 +307,9 @@ class Pixels():
 				track = tracks[t]
 				for d in range(index_marker[t], len(track)):
 					# print "Checking segment "+str(d)
-					segment = track[d]
-					seg_time = segment['time']
-					seg_time_end = segment['time_end']
+					segment 	= track[d]
+					seg_time 	= segment['time']
+					seg_time_end= segment['time_end']
 
 
 					if seg_time <= time_elapsed and seg_time_end >= time_elapsed:
@@ -203,9 +324,9 @@ class Pixels():
 							self.setpixelcolor(t, seg_color)
 
 						elif seg_type==ledpixels_T_GRADI:
-							seg_duration = seg_time_end - seg_time
-							seg_progress_perc = (time_elapsed - seg_time )*1.0/(seg_duration*1.0)
-							seg_progress_iprc = 1.0-seg_progress_perc
+							seg_duration 		= seg_time_end - seg_time
+							seg_progress_perc 	= (time_elapsed - seg_time )*1.0/(seg_duration*1.0)
+							seg_progress_iprc 	= 1.0-seg_progress_perc
 
 							seg_color_compd = Color(segment['color']['r']*(seg_progress_iprc)+max(segment['color_end']['r'],0)*(seg_progress_perc),
 													segment['color']['g']*(seg_progress_iprc)+max(segment['color_end']['g'],0)*(seg_progress_perc), 
@@ -214,14 +335,57 @@ class Pixels():
 							self.setpixelcolor(t, seg_color_compd)
 
 						elif seg_type==ledpixels_T_FLASH:
-							seg_period = segment['period'] 
-							seg_progress = time_elapsed - seg_time 
-							seg_period_fit = ((seg_progress * 10.0) % (seg_period * 10.0)) / 10.0
+							seg_period 		= segment['period'] 
+							seg_progress 	= time_elapsed - seg_time 
+							seg_period_fit 	= ((seg_progress * 10.0) % (seg_period * 10.0)) / 10.0
 
 							if seg_period_fit < seg_period / 2.0:
 								self.setpixelcolor(t, seg_color)
 							else:
 								self.setpixelcolor(t,Color_black)
+
+						elif seg_type==ledpixels_T_CHASE:
+							seg_progress= time_elapsed - seg_time 
+							seg_period 	= segment['period'] 
+							p_from 		= segment['pixel_from']
+							p_to 		= segment['pixel_to']
+							p_range 	= abs(p_from-p_to)+1
+
+							seg_progress_mod = seg_progress % (seg_period*p_range)
+
+							# period = 0.1, from=0, to=9, time_end=2, progress= 0.6
+							if seg_progress_mod>=((t-p_from)*seg_period) and seg_progress_mod<((t-p_from+1)*seg_period) and t >=p_from and t<=p_to:
+								# print str(seg_progress_mod)+">="+str((t*seg_period)) + " and < "+str(((t+1)*seg_period))
+								self.setpixelcolor(t, seg_color)
+							else:
+								seg_wasSet = False
+
+						elif seg_type==ledpixels_T_CHASE_GRAD:
+							seg_duration 		= seg_time_end - seg_time
+							seg_progress_perc 	= (time_elapsed - seg_time )*1.0/(seg_duration*1.0)
+							seg_progress_iprc 	= 1.0-seg_progress_perc
+
+							seg_color_compd = Color(segment['color']['r']*(seg_progress_iprc)+max(segment['color_end']['r'],0)*(seg_progress_perc),
+													segment['color']['g']*(seg_progress_iprc)+max(segment['color_end']['g'],0)*(seg_progress_perc), 
+													segment['color']['b']*(seg_progress_iprc)+max(segment['color_end']['b'],0)*(seg_progress_perc))
+
+							seg_progress= time_elapsed - seg_time 
+							seg_period 	= segment['period'] 
+							p_from 		= segment['pixel_from']
+							p_to 		= segment['pixel_to']
+							p_range 	= abs(p_from-p_to)+1
+
+							seg_progress_mod = seg_progress % (seg_period*p_range)
+
+							# period = 0.1, from=0, to=9, time_end=2, progress= 0.6
+							if seg_progress_mod>=((t-p_from)*seg_period) and seg_progress_mod<((t-p_from+1)*seg_period) and t >=p_from and t<=p_to:
+								# print str(seg_progress_mod)+">="+str((t*seg_period)) + " and < "+str(((t+1)*seg_period))
+								self.setpixelcolor(t, seg_color_compd)
+							else:
+								seg_wasSet = False
+
+
+
 
 						break #go to next track
 
@@ -250,3 +414,5 @@ def Color(r, g, b):
 	return ((int(r) & 0xFF) << 16) | ((int(g) & 0xFF) << 8) | (int(b) & 0xFF)
 
 Color_black = Color(0,0,0)
+
+p = Pixels()
