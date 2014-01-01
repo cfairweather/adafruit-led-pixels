@@ -415,4 +415,7 @@ def Color(r, g, b):
 
 Color_black = Color(0,0,0)
 
+def PixelColor (r,g,b):
+	return ((int(r) & 0xFF) << 16) | ((int(g) & 0xFF) << 8) | (int(b) & 0xFF)
+
 p = Pixels()
